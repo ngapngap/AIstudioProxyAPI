@@ -21,6 +21,7 @@ services:
       - ./.env:/app/.env:ro
       - ./logs:/app/logs
       - ./certs:/app/certs:ro
+      - ./logs/fc_debug:/app/logs/fc_debug
     environment:
       - PYTHONUNBUFFERED=1
       - HTTP_PROXY=${HTTP_PROXY:-}
