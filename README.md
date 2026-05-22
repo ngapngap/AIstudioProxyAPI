@@ -145,6 +145,38 @@ cp .env.example .env
 
 ---
 
+## 🐳 Docker 部署
+
+### 快速部署
+
+```bash
+# 克隆仓库
+git clone https://github.com/CJackHwang/AIstudioProxyAPI.git
+cd AIstudioProxyAPI
+
+# 复制配置
+cp .env.docker.example .env
+
+# 启动服务 (自动拉取最新镜像)
+docker compose up -d
+```
+
+### 手动构建
+
+```bash
+docker compose -f docker/docker-compose.yml build
+docker compose -f docker/docker-compose.yml up -d
+```
+
+### 更新
+
+```bash
+docker compose pull
+docker compose up -d
+```
+
+---
+
 ## 📚 文档
 
 - [文档总览](docs/README.md)
